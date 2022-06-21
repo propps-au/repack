@@ -1,0 +1,10 @@
+{
+  "name": "robocow",
+  "private": true,
+  "version": "0.1.0",
+  "main": "./index.js",
+  "dependencies": {
+    "blorp": "workspace:*",
+    "cowsay": "^1.5.0"
+  }
+}

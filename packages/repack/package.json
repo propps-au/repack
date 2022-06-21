@@ -1,0 +1,53 @@
+{
+  "name": "@propps-au/repack",
+  "version": "0.1.0",
+  "description": "Rollup plugins and presets for bundling backend services",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com/propps-au/repack.git",
+    "directory": "packages/repack"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepack": "tsc"
+  },
+  "dependencies": {
+    "@pnpm/find-workspace-dir": "^4.0.1",
+    "@pnpm/find-workspace-packages": "^4.0.13",
+    "@pnpm/logger": "^4.0.0",
+    "@rollup/plugin-commonjs": "^22.0.0",
+    "@rollup/plugin-graphql": "^1.1.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "esbuild": "^0.14.47",
+    "fs-extra": "^10.1.0",
+    "pkg-dir": "5.0.0",
+    "pkgs-graph": "7.0.0",
+    "ramda": "^0.28.0",
+    "rollup": "^2.75.7",
+    "rollup-plugin-esbuild": "^4.9.1"
+  },
+  "devDependencies": {
+    "@tsconfig/node16": "^1.0.3",
+    "@types/fs-extra": "^9.0.13",
+    "@types/ramda": "^0.28.14",
+    "graphql": "^16.5.0",
+    "prettier": "^2.7.1",
+    "typescript": "^4.7.4"
+  },
+  "peerDependencies": {
+    "graphql": "^16.5.0"
+  },
+  "peerDependenciesMeta": {
+    "graphql": {
+      "optional": true
+    }
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  }
+}

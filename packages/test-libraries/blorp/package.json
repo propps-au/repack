@@ -1,0 +1,6 @@
+{
+  "name": "blorp",
+  "version": "0.1.0",
+  "private": true,
+  "module": "index.mjs"
+}
