@@ -26,6 +26,10 @@ export function preset(): Plugin[] {
     }),
     json(),
     graphql(),
-    esbuild({ include: /\.[jt]sx?$/, exclude: /node_modules/ }),
+    esbuild({
+      include: /\.[jt]sx?$/,
+      exclude: /node_modules/,
+      target: "node16",
+    }),
   ];
 }
