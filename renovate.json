@@ -1,0 +1,29 @@
+{
+  "extends": ["config:base"],
+  "dependencyDashboard": true,
+  "prHourlyLimit": 8,
+  "prConcurrentLimit": 0,
+  "packageRules": [
+    {
+      "matchManagers": ["npm"],
+      "schedule": ["after 7am and before 10am every weekday"],
+      "automerge": false,
+      "matchUpdateTypes": ["major"]
+    },
+    {
+      "matchManagers": ["npm"],
+      "matchPackagePatterns": ["*"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "groupName": "all non-major dependencies",
+      "groupSlug": "all-minor-patch",
+      "schedule": ["after 7am and before 10am every weekday"],
+      "automerge": true
+    },
+    {
+      "matchManagers": ["npm"],
+      "automerge": true,
+      "matchUpdateTypes": ["pin"]
+    }
+  ],
+  "timezone": "Australia/Melbourne"
+}
