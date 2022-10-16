@@ -17,7 +17,7 @@ importers:
       '@pnpm/logger': ^4.0.0
       '@rollup/plugin-commonjs': ^22.0.0
       '@rollup/plugin-graphql': ^1.1.0
-      '@rollup/plugin-json': ^4.1.0
+      '@rollup/plugin-json': ^5.0.0
       '@rollup/plugin-node-resolve': ^13.3.0
       '@tsconfig/node16': ^1.0.3
       '@types/fs-extra': ^9.0.13
@@ -38,7 +38,7 @@ importers:
       '@pnpm/logger': 4.0.0
       '@rollup/plugin-commonjs': 22.0.0_rollup@2.75.7
       '@rollup/plugin-graphql': 1.1.0_graphql@16.5.0+rollup@2.75.7
-      '@rollup/plugin-json': 4.1.0_rollup@2.75.7
+      '@rollup/plugin-json': 5.0.0_rollup@2.75.7
       '@rollup/plugin-node-resolve': 13.3.0_rollup@2.75.7
       esbuild: 0.14.47
       fs-extra: 10.1.0
@@ -606,12 +606,16 @@ packages:
       rollup: 2.75.7
     dev: false
 
-  /@rollup/plugin-json/4.1.0_rollup@2.75.7:
-    resolution: {integrity: sha512-yfLbTdNS6amI/2OpmbiBoW12vngr5NW2jCJVZSBEz+H5KfUJZ2M7sDjk0U6GOOdCWFVScShte29o9NezJ53TPw==}
+  /@rollup/plugin-json/5.0.0_rollup@2.75.7:
+    resolution: {integrity: sha512-LsWDA5wJs/ggzakVuKQhZo7HPRcQZgBa3jWIVxQSFxaRToUGNi8ZBh3+k/gQ+1eInVYJgn4WBRCUkmoDrmmGzw==}
+    engines: {node: '>=14.0.0'}
     peerDependencies:
-      rollup: ^1.20.0 || ^2.0.0
+      rollup: ^1.20.0||^2.0.0||^3.0.0
+    peerDependenciesMeta:
+      rollup:
+        optional: true
     dependencies:
-      '@rollup/pluginutils': 3.1.0_rollup@2.75.7
+      '@rollup/pluginutils': 4.2.1
       rollup: 2.75.7
     dev: false
 
@@ -1637,7 +1641,6 @@ packages:
   /graphql/16.5.0:
     resolution: {integrity: sha512-qbHgh8Ix+j/qY+a/ZcJnFQ+j8ezakqPiHwPiZhV/3PgGlgf96QMBB5/f2rkiC9sgLoy/xvT6TSiaf2nTHJh5iA==}
     engines: {node: ^12.22.0 || ^14.16.0 || ^16.0.0 || >=17.0.0}
-    dev: true
 
   /hard-rejection/2.1.0:
     resolution: {integrity: sha512-VIZB+ibDhx7ObhAe7OVtoEbuP4h/MuOTHJ+J8h/eBXotJYl0fBgR72xDFCKgIh22OJZIOVNxBMWuhAr10r8HdA==}
