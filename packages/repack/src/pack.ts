@@ -11,9 +11,68 @@ import { Project, ResolvedWorkspace, resolveWorkspace } from "./pnpm-workspace";
  * monorepo dependencies inlined and a copy of the monorepo's root
  * .npmrc.
  */
-export function pack(options: { entry?: string } = {}): Plugin {
+export function pack(options: { entry: string; monorepo?: boolean }): Plugin {
+  const monorepo = options.monorepo ?? true;
   const entry = options.entry?.replace(/\.tsx?$/, ".js");
 
+  if (monorepo) {
+    return createMonorepoPackDepsPlugin(entry);
+  } else {
+    return createPackPlugin(entry);
+  }
+}
+
+function createPackPlugin(entry?: string): Plugin {
+  return {
+    name: "pack",
+
+    async generateBundle(options, bundle, isWrite) {
+      let npmrc: string | null = null;
+      try {
+        npmrc = (
+          await fs.readFile(path.join(process.cwd(), ".npmrc"))
+        ).toString();
+      } catch (err) {}
+
+      const entries = Object.values(bundle).filter(
+        (output): output is OutputChunk =>
+          output.type === "chunk" && output.isEntry
+      );
+
+      if (!entries.find((item) => item.fileName === entry)) {
+        throw new Error(`Entry file ${entry} not found in bundle`);
+      }
+
+      const manifest = JSON.parse(
+        (
+          await fs.readFile(path.resolve(process.cwd(), "package.json"))
+        ).toString()
+      );
+
+      const newManifest: Project["manifest"] = {
+        main: entry,
+        scripts: entry ? { start: "node ." } : undefined,
+        engines: clone(manifest.engines!),
+        dependencies: clone(manifest.dependencies),
+      };
+
+      this.emitFile({
+        type: "asset",
+        fileName: "package.json",
+        source: JSON.stringify(newManifest, null, 2),
+      });
+      if (npmrc) {
+        this.emitFile({
+          type: "asset",
+          fileName: ".npmrc",
+          source: npmrc,
+        });
+      }
+    },
+  };
+}
+
+function createMonorepoPackDepsPlugin(entry?: string): Plugin {
   return {
     name: "monorepo-pack-deps",
 
