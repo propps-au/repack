@@ -16,7 +16,7 @@
     "prepack": "tsc"
   },
   "dependencies": {
-    "@pnpm/find-workspace-dir": "^4.0.1",
+    "@pnpm/find-workspace-dir": "^5.0.0",
     "@pnpm/find-workspace-packages": "^4.0.13",
     "@pnpm/logger": "^4.0.0",
     "@rollup/plugin-commonjs": "^22.0.0",
