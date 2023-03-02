@@ -26,7 +26,7 @@
     "esbuild": "^0.14.47",
     "fs-extra": "^10.1.0",
     "pkg-dir": "5.0.0",
-    "pkgs-graph": "7.0.0",
+    "pkgs-graph": "8.0.0",
     "ramda": "^0.28.0",
     "rollup": "^2.75.7",
     "rollup-plugin-esbuild": "^4.9.1"
