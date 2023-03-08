@@ -21,7 +21,7 @@
     "@pnpm/logger": "^4.0.0",
     "@rollup/plugin-commonjs": "^22.0.0",
     "@rollup/plugin-graphql": "^1.1.0",
-    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-json": "^6.0.0",
     "@rollup/plugin-node-resolve": "^13.3.0",
     "esbuild": "^0.14.47",
     "fs-extra": "^10.1.0",

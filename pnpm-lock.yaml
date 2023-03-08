@@ -17,7 +17,7 @@ importers:
       '@pnpm/logger': ^4.0.0
       '@rollup/plugin-commonjs': ^22.0.0
       '@rollup/plugin-graphql': ^1.1.0
-      '@rollup/plugin-json': ^4.1.0
+      '@rollup/plugin-json': ^6.0.0
       '@rollup/plugin-node-resolve': ^13.3.0
       '@tsconfig/node16': ^1.0.3
       '@types/fs-extra': ^9.0.13
@@ -38,7 +38,7 @@ importers:
       '@pnpm/logger': 4.0.0
       '@rollup/plugin-commonjs': 22.0.0_rollup@3.18.0
       '@rollup/plugin-graphql': 1.1.0_klfeleysnybemz7oqzewavyydq
-      '@rollup/plugin-json': 4.1.0_rollup@3.18.0
+      '@rollup/plugin-json': 6.0.0_rollup@3.18.0
       '@rollup/plugin-node-resolve': 13.3.0_rollup@3.18.0
       esbuild: 0.14.47
       fs-extra: 10.1.0
@@ -606,12 +606,16 @@ packages:
       rollup: 3.18.0
     dev: false
 
-  /@rollup/plugin-json/4.1.0_rollup@3.18.0:
-    resolution: {integrity: sha512-yfLbTdNS6amI/2OpmbiBoW12vngr5NW2jCJVZSBEz+H5KfUJZ2M7sDjk0U6GOOdCWFVScShte29o9NezJ53TPw==}
+  /@rollup/plugin-json/6.0.0_rollup@3.18.0:
+    resolution: {integrity: sha512-i/4C5Jrdr1XUarRhVu27EEwjt4GObltD7c+MkCIpO2QIbojw8MUs+CCTqOphQi3Qtg1FLmYt+l+6YeoIf51J7w==}
+    engines: {node: '>=14.0.0'}
     peerDependencies:
-      rollup: ^1.20.0 || ^2.0.0
+      rollup: ^1.20.0||^2.0.0||^3.0.0
+    peerDependenciesMeta:
+      rollup:
+        optional: true
     dependencies:
-      '@rollup/pluginutils': 3.1.0_rollup@3.18.0
+      '@rollup/pluginutils': 5.0.2_rollup@3.18.0
       rollup: 3.18.0
     dev: false
 
@@ -650,6 +654,21 @@ packages:
       picomatch: 2.3.1
     dev: false
 
+  /@rollup/pluginutils/5.0.2_rollup@3.18.0:
+    resolution: {integrity: sha512-pTd9rIsP92h+B6wWwFbW8RkZv4hiR/xKsqre4SIuAOaOEQRxi0lqLke9k2/7WegC85GgUs9pjmOjCUi3In4vwA==}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      rollup: ^1.20.0||^2.0.0||^3.0.0
+    peerDependenciesMeta:
+      rollup:
+        optional: true
+    dependencies:
+      '@types/estree': 1.0.0
+      estree-walker: 2.0.2
+      picomatch: 2.3.1
+      rollup: 3.18.0
+    dev: false
+
   /@tsconfig/node16/1.0.3:
     resolution: {integrity: sha512-yOlFc+7UtL/89t2ZhjPvvB/DeAr3r+Dq58IgzsFkOAvVC6NMJXmCGjbptdXdR9qsX7pKcTL+s87FtYREi2dEEQ==}
     dev: true
@@ -660,6 +679,10 @@ packages:
 
   /@types/estree/0.0.51:
     resolution: {integrity: sha512-CuPgU6f3eT/XgKKPqKd/gLZV1Xmvf1a2R5POBOGQa6uv82xpls89HU5zKeVoyR8XzHd1RGNOlQlvUe3CFkjWNQ==}
+    dev: false
+
+  /@types/estree/1.0.0:
+    resolution: {integrity: sha512-WulqXMDUTYAXCjZnk6JtIHPigp55cVtDgDrO2gHRwhyJto21+1zbVCtOYB2L1F9w4qCQ0rOGWBnBe0FNTiEJIQ==}
     dev: false
 
   /@types/fs-extra/9.0.13:
