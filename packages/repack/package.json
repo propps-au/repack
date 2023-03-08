@@ -28,7 +28,7 @@
     "pkg-dir": "5.0.0",
     "pkgs-graph": "7.0.0",
     "ramda": "^0.28.0",
-    "rollup": "^2.75.7",
+    "rollup": "^3.18.0",
     "rollup-plugin-esbuild": "^4.9.1"
   },
   "devDependencies": {
