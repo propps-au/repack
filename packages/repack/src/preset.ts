@@ -3,7 +3,7 @@ import json from "@rollup/plugin-json";
 import resolve from "@rollup/plugin-node-resolve";
 import { Plugin } from "rollup";
 import esbuild from "rollup-plugin-esbuild";
-import { external } from "./external";
+import { external, ExternalPluginOptions } from "./external";
 import { graphql } from "./graphql";
 
 /**
@@ -17,9 +17,9 @@ import { graphql } from "./graphql";
  * - rollup-plugin-esbuild
  * - rollup-plugin-graphql (if graphql is installed)
  */
-export function preset(): Plugin[] {
+export function preset(options?: PresetOptions): Plugin[] {
   return [
-    external(),
+    external(options?.external),
     commonjs(),
     resolve({
       extensions: [".js", ".jsx", ".ts", ".tsx", ".json", ".graphql"],
@@ -33,3 +33,7 @@ export function preset(): Plugin[] {
     }),
   ];
 }
+
+type PresetOptions = {
+  external?: ExternalPluginOptions;
+};
