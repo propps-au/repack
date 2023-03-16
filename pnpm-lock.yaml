@@ -31,7 +31,7 @@ importers:
       ramda: ^0.28.0
       rollup: ^3.18.0
       rollup-plugin-esbuild: ^4.9.1
-      typescript: ^4.7.4
+      typescript: 5.0.2
     dependencies:
       '@pnpm/find-workspace-dir': 4.0.1
       '@pnpm/find-workspace-packages': 4.0.13_@pnpm+logger@4.0.0
@@ -53,7 +53,7 @@ importers:
       '@types/ramda': 0.28.14
       graphql: 16.5.0
       prettier: 2.7.1
-      typescript: 4.7.4
+      typescript: 5.0.2
 
   packages/test-libraries/blorp:
     specifiers: {}
@@ -2863,9 +2863,9 @@ packages:
       is-typedarray: 1.0.0
     dev: false
 
-  /typescript/4.7.4:
-    resolution: {integrity: sha512-C0WQT0gezHuw6AdY1M2jxUO83Rjf0HP7Sk1DtXj6j1EwkQNZrHAg2XPWlq62oqEhYvONq5pkC2Y9oPljWToLmQ==}
-    engines: {node: '>=4.2.0'}
+  /typescript/5.0.2:
+    resolution: {integrity: sha512-wVORMBGO/FAs/++blGNeAVdbNKtIh1rbBL2EyQ1+J9lClJ93KiiKe8PmFIVdXhHcyv44SL9oglmfeSsndo0jRw==}
+    engines: {node: '>=12.20'}
     hasBin: true
     dev: true
 
