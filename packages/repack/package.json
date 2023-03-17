@@ -23,10 +23,10 @@
     "@rollup/plugin-graphql": "^1.1.0",
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^13.3.0",
-    "esbuild": "^0.14.47",
+    "esbuild": "^0.17.0",
     "fs-extra": "^10.1.0",
     "pkg-dir": "5.0.0",
-    "pkgs-graph": "7.0.0",
+    "pkgs-graph": "7.0.2",
     "ramda": "^0.28.0",
     "rollup": "^3.18.0",
     "rollup-plugin-esbuild": "^4.9.1"
