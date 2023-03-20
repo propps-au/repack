@@ -20,10 +20,10 @@ importers:
       '@rollup/plugin-json': ^4.1.0
       '@rollup/plugin-node-resolve': ^13.3.0
       '@tsconfig/node16': ^1.0.3
-      '@types/fs-extra': ^9.0.13
+      '@types/fs-extra': 11.0.1
       '@types/ramda': ^0.28.14
       esbuild: ^0.14.47
-      fs-extra: ^10.1.0
+      fs-extra: ^11.0.0
       graphql: ^16.5.0
       pkg-dir: 5.0.0
       pkgs-graph: 7.0.0
@@ -41,7 +41,7 @@ importers:
       '@rollup/plugin-json': 4.1.0_rollup@3.18.0
       '@rollup/plugin-node-resolve': 13.3.0_rollup@3.18.0
       esbuild: 0.14.47
-      fs-extra: 10.1.0
+      fs-extra: 11.1.0
       pkg-dir: 5.0.0
       pkgs-graph: 7.0.0
       ramda: 0.28.0
@@ -49,7 +49,7 @@ importers:
       rollup-plugin-esbuild: 4.9.1_tvfe2zwniyvtzuietoti5vqlsu
     devDependencies:
       '@tsconfig/node16': 1.0.3
-      '@types/fs-extra': 9.0.13
+      '@types/fs-extra': 11.0.1
       '@types/ramda': 0.28.14
       graphql: 16.5.0
       prettier: 2.7.1
@@ -662,9 +662,10 @@ packages:
     resolution: {integrity: sha512-CuPgU6f3eT/XgKKPqKd/gLZV1Xmvf1a2R5POBOGQa6uv82xpls89HU5zKeVoyR8XzHd1RGNOlQlvUe3CFkjWNQ==}
     dev: false
 
-  /@types/fs-extra/9.0.13:
-    resolution: {integrity: sha512-nEnwB++1u5lVDM2UI4c1+5R+FYaKfaAzS4OococimjVm3nQw3TuzH5UNsocrcTBbhnerblyHj4A49qXbIiZdpA==}
+  /@types/fs-extra/11.0.1:
+    resolution: {integrity: sha512-MxObHvNl4A69ofaTRU8DFqvgzzv8s9yRtaPPm5gud9HDNvpB3GPQFvNuTWAI59B9huVGV5jXYJwbCsmBsOGYWA==}
     dependencies:
+      '@types/jsonfile': 6.1.1
       '@types/node': 18.0.0
     dev: true
 
@@ -672,6 +673,12 @@ packages:
     resolution: {integrity: sha512-Q0Op0hdWbYd1iahB+IFNQcWXFq4O0Q5MwQP7uN0souuQ4rPg1vEYcnIOfr1gY+M+6rc8FGoRaBO1mOOvL29sEQ==}
     dependencies:
       ci-info: 3.3.2
+    dev: true
+
+  /@types/jsonfile/6.1.1:
+    resolution: {integrity: sha512-GSgiRCVeapDN+3pqA35IkQwasaCh/0YFH5dEF6S88iDvEn901DjOeH3/QPY+XYP1DFzDZPvIvfeEgk+7br5png==}
+    dependencies:
+      '@types/node': 18.0.0
     dev: true
 
   /@types/minimist/1.2.2:
@@ -1495,9 +1502,9 @@ packages:
       pkg-dir: 4.2.0
     dev: true
 
-  /fs-extra/10.1.0:
-    resolution: {integrity: sha512-oRXApq54ETRj4eMiFzGnHWGy+zo5raudjuxN0b8H7s/RU2oW0Wvsx9O0ACRN/kRq9E8Vu/ReskGB5o3ji+FzHQ==}
-    engines: {node: '>=12'}
+  /fs-extra/11.1.0:
+    resolution: {integrity: sha512-0rcTq621PD5jM/e0a3EJoGC/1TC5ZBCERW82LQuwfGnCa1V8w7dpYH1yNu+SLb6E5dkeCBzKEyLGlFrnr+dUyw==}
+    engines: {node: '>=14.14'}
     dependencies:
       graceful-fs: 4.2.10
       jsonfile: 6.1.0

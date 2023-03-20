@@ -24,7 +24,7 @@
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^13.3.0",
     "esbuild": "^0.14.47",
-    "fs-extra": "^10.1.0",
+    "fs-extra": "^11.0.0",
     "pkg-dir": "5.0.0",
     "pkgs-graph": "7.0.0",
     "ramda": "^0.28.0",
@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "@tsconfig/node16": "^1.0.3",
-    "@types/fs-extra": "^9.0.13",
+    "@types/fs-extra": "11.0.1",
     "@types/ramda": "^0.28.14",
     "graphql": "^16.5.0",
     "prettier": "^2.7.1",
